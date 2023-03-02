@@ -175,12 +175,12 @@ a {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        color: #ffffff;
-        background: transparent;
-        border:2px solid  #E2BB25;
+        color: #000000;
+   
+        background:  #E2BB25;
         width: 66px;
         height: 68px;
-        border-radius: 6px;
+        border-radius: 5px;
 
         &-number {
           font-weight: 700;
@@ -189,7 +189,7 @@ a {
         }
 
         &-text {
-          font-weight: 400;
+          font-weight: 700;
           font-size: 10px;
           line-height: 12px;
           text-transform: uppercase;
