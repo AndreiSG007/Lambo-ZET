@@ -1,5 +1,5 @@
 
-import { defuFn } from '/Users/andreisoftgenius/Documents/LAMBO/lambo-promo-ZET/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/Users/norbert/Projects/Lambo-ZET/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {}
 

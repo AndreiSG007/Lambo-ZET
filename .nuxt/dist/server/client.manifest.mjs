@@ -1,1 +1,1 @@
-export { default } from "file:///Users/andreisoftgenius/Documents/LAMBO/lambo-promo-ZET/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export { default } from "file:///Users/norbert/Projects/Lambo-ZET/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
