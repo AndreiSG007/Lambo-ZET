@@ -49,5 +49,5 @@ export const nuxtI18nOptionsDefault = Object({vueI18n: undefined,locales: [],def
 
 export const nuxtI18nInternalOptions = Object({__normalizedLocales: [Object({"code":"en","file":"en.json","path":"/Users/norbert/Projects/Lambo-ZET/lang/en.json"}),Object({"code":"de","file":"de.json","path":"/Users/norbert/Projects/Lambo-ZET/lang/de.json"}),Object({"code":"it","file":"it.json","path":"/Users/norbert/Projects/Lambo-ZET/lang/it.json"}),Object({"code":"fi","file":"fi.json","path":"/Users/norbert/Projects/Lambo-ZET/lang/fi.json"}),Object({"code":"pl","file":"pl.json","path":"/Users/norbert/Projects/Lambo-ZET/lang/pl.json"})]})
 export const NUXT_I18N_MODULE_ID = "@nuxtjs/i18n"
-export const isSSG = false
+export const isSSG = true
 export const isSSR = true

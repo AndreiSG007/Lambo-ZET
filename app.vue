@@ -111,15 +111,15 @@
               class="pic swiper-container-1"
               @click="() => showImg(index)"
             >
-              <img :src="src" alt="image" />
+              <img :src="src" alt="image"/>
             </swiper-slide>
           </swiper>
           <div class="arrows-container">
             <button @click="controlledSwiper.slidePrev()">
-              <img src="/assets/left-arrow.svg" />
+              <img src="/assets/left-arrow.svg" alt="prev"/>
             </button>
             <button @click="controlledSwiper.slideNext()">
-              <img src="/assets/right-arrow.svg" />
+              <img src="/assets/right-arrow.svg" alt="next"/>
             </button>
           </div>
         </div>
@@ -130,7 +130,7 @@
           @hide="onHide"
         ></vue-easy-lightbox>
 
-        <div class="modal-overlay" v-show="showModal">
+        <div class="modal-overlay" v-if="showModal">
           <div class="modal">
             <h2>{{ $t("termsAndConditions") }}</h2>
             <p>1.{{ $t("thePromotionStarts") }}</p>
@@ -148,13 +148,13 @@
             <p>13.{{ $t("weUnderstandThatAnything") }}</p>
             <p>14.{{ $t("thisEssentiallyMeans") }}</p>
             <div class="close">
-              <button @click="showModal = false">X</button>
+              <button @click="closeModal">X</button>
             </div>
           </div>
         </div>
 
         <footer>
-          <button @click="showModal = true">
+          <button @click="openModal">
             <u>{{ $t("termsAndConditions") }}</u>
           </button>
           <p>
@@ -196,6 +196,16 @@ export default defineComponent({
       },
     };
 
+    const openModal = () => {
+      showModal.value = true;
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeModal = () => {
+      showModal.value = false;
+      document.body.style.overflow = "auto";
+    };
+
     const controlledSwiper = ref(null);
     const setControlledSwiper = (swiper) => {
       controlledSwiper.value = swiper;
@@ -235,6 +245,8 @@ export default defineComponent({
       Controller,
       controlledSwiper,
       setControlledSwiper,
+      openModal,
+      closeModal,
     };
   },
 });

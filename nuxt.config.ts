@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Lambo Promo - Oh My Spins",
+      title: "Lambo Promo - Zet",
       link: [{ rel: "icon", type: "image/*", href: "/favicon.ico" }],
     },
     baseURL: '/mateadmin/zet/',
