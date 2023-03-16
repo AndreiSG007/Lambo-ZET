@@ -62,7 +62,6 @@
       <div>
         <img
           src="/assets/header_group_Zet.png"
-          format="webp"
           alt=""
           class="main-image"
         />
@@ -112,7 +111,7 @@
               class="pic swiper-container-1"
               @click="() => showImg(index)"
             >
-              <img :src="src" format="webp" />
+              <img :src="src" alt="image" />
             </swiper-slide>
           </swiper>
           <div class="arrows-container">
