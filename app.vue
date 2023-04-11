@@ -56,7 +56,7 @@
           </vue-countdown>
         </no-ssr>
       </div>
-      <a target="_blank" href="https://zetcasino.com/">
+      <a target="_blank" :href="casinoUrl">
         <button class="main-button">{{ $t("playNow") }}</button>
       </a>
       <div>
@@ -232,6 +232,16 @@ export default defineComponent({
 
     const onHide = () => (visibleRef.value = false);
 
+    const route = useRoute();
+    const casinoUrl = computed(() => {
+      let url = 'https://zetcasino.com';
+      if (route.query.btag) {
+        url += `?btag=${route.query.btag}`;
+      }
+      
+      return url;
+    });
+
     return {
       visibleRef,
       indexRef,
@@ -247,6 +257,7 @@ export default defineComponent({
       setControlledSwiper,
       openModal,
       closeModal,
+      casinoUrl,
     };
   },
 });
