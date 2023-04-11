@@ -56,9 +56,9 @@
           </vue-countdown>
         </no-ssr>
       </div>
-      <a target="_blank" :href="casinoUrl">
+      <div @click="casinoRedirect">
         <button class="main-button">{{ $t("playNow") }}</button>
-      </a>
+      </div>
       <div>
         <img
           src="/assets/header_group_Zet.png"
@@ -233,14 +233,14 @@ export default defineComponent({
     const onHide = () => (visibleRef.value = false);
 
     const route = useRoute();
-    const casinoUrl = computed(() => {
+
+    const casinoRedirect = () => {
       let url = 'https://zetcasino.com';
       if (route.query.btag) {
         url += `?btag=${route.query.btag}`;
       }
-      
-      return url;
-    });
+      window.open(url, '_blank');
+    };
 
     return {
       visibleRef,
@@ -257,7 +257,7 @@ export default defineComponent({
       setControlledSwiper,
       openModal,
       closeModal,
-      casinoUrl,
+      casinoRedirect,
     };
   },
 });
