@@ -104,9 +104,6 @@
           <button @click="openModal">
             <u>{{ $t("termsAndConditions") }}</u>
           </button>
-          <p>
-            {{ $t("casinolyIsOperated") }}
-          </p>
         </footer>
       </div>
     </div>
