@@ -10,12 +10,8 @@
       <div @click="casinoRedirect">
         <button class="main-button">{{ $t("playNow") }}</button>
       </div>
-      <div class="hero">
+      <div>
         <img src="/assets/header_group_Zet.png" alt="" class="main-image" />
-        <a class="hero__social" href="https://t.me/+MJpONQyVqQxlNTU0" target="blank">
-            <img src="/assets/telegram.png" alt="telegram"/>
-            <p>{{ $t('joinTelegram') }}</p>
-        </a>
       </div>
 
       <div class="steps">
